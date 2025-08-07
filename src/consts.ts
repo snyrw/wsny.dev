@@ -1,11 +1,11 @@
 import type { IconMap, SocialLink, Site } from '@/types'
 
 export const SITE: Site = {
-  title: 'wiruka',
+  title: 'wsny',
   description:
     'personal dev website covering projects, OSS contributions, and blog posts about the state of japanese ml research with reproductions.',
   href: 'https://astro-erudite.vercel.app',
-  author: 'wiruka',
+  author: 'will snyder',
   locale: 'en-US',
   featuredPostCount: 2,
   postsPerPage: 3,
