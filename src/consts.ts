@@ -28,7 +28,7 @@ export const NAV_LINKS: SocialLink[] = [
 
 export const SOCIAL_LINKS: SocialLink[] = [
   {
-    href: 'https://github.com/wiruka0',
+    href: 'https://github.com/snyrw',
     label: 'GitHub',
   },
   //{
@@ -36,7 +36,7 @@ export const SOCIAL_LINKS: SocialLink[] = [
     //label: 'Twitter',
   //},
   {
-    href: 'mailto:willsnyder2nd@gmail.com',
+    href: 'mailto:snywr@proton.me',
     label: 'Email',
   },
   {
