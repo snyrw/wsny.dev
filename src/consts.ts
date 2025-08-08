@@ -4,7 +4,7 @@ export const SITE: Site = {
   title: 'wsny',
   description:
     'personal dev website covering projects, OSS contributions, and blog posts about the state of japanese ml research with reproductions.',
-  href: 'https://astro-erudite.vercel.app',
+  href: 'https://wsny.dev',
   author: 'will snyder',
   locale: 'en-US',
   featuredPostCount: 2,
@@ -15,10 +15,6 @@ export const NAV_LINKS: SocialLink[] = [
   {
     href: '/blog',
     label: 'blog',
-  },
-  {
-    href: '/authors',
-    label: 'authors',
   },
   {
     href: '/about',
