@@ -1,9 +1,9 @@
 import type { IconMap, SocialLink, Site } from '@/types'
 
 export const SITE: Site = {
-  title: 'wsny',
+  title: 'wsny.dev',
   description:
-    'personal dev website covering projects, OSS contributions, and blog posts about the state of japanese ml research with reproductions.',
+    'Personal dev website covering projects, OSS contributions, and blog posts about the state of japanese ml research with reproductions.',
   href: 'https://wsny.dev',
   author: 'will snyder',
   locale: 'en-US',
