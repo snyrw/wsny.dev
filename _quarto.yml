@@ -7,9 +7,9 @@ website:
     right:
       - about.qmd
       - icon: linkedin
-        href: https://linkedin.com/
+        href: https://linkedin.com/in/wrsnyder
       - icon: github
-        href: https://github.com
+        href: https://github.com/snyrw
 format:
   html:
     theme:
