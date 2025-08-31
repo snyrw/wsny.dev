@@ -1,0 +1,20 @@
+---
+title: "About"
+image: profile.jpg
+about:
+  template: jolla
+  links:
+    - icon: linkedin
+      text: LinkedIn
+      href: https://linkedin.com
+    - icon: github
+      text: Github
+      href: https://github.com
+
+---
+
+I'm Will Snyder, a current senior at Western Washington University.
+
+I'm also a self-taught ML researcher currently exploring optimization theory, information-theoretic perspectives on deep learning, as well as other mathematical intuitions and emerging research directions from canonical texts and recent papers. Proficient in Japanese, I'm interested in tracking developments across both English and Japanese research landscapes.
+
+If you're interested in anything I've done, don't be afraid to reach out!
