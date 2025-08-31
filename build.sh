@@ -1,5 +1,0 @@
-#!/bin/bash
-set -e
-curl -L https://quarto.org/download/latest/quarto-linux-amd64.deb -o quarto.deb
-sudo dpkg -i quarto.deb
-quarto render
