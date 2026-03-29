@@ -6,8 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Will Snyder">
+<meta name="dcterms.date" content="2026-03-27">
+<meta name="description" content="A reflection on the results of submitting to Neel Nanda’s MATS stream">
 
-<title>Blog Posts – wsny.dev</title>
+<title>MATS 10.0 Submission Reflection – wsny.dev</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,26 +26,24 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-ea1d7ac60288e0f1efdbc993fd8432ae.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-2890eba573baac25c3e9f0f9d94fc55f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-ea1d7ac60288e0f1efdbc993fd8432ae.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-2890eba573baac25c3e9f0f9d94fc55f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -70,79 +71,21 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
 
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../styles.css">
 </head>
 
-<body class="nav-fixed quarto-light">
+<body class="nav-fixed fullcontent quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top quarto-banner">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="./index.html" class="navbar-brand navbar-brand-logo">
+    <a href="../index.html" class="navbar-brand navbar-brand-logo">
     </a>
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">wsny.dev</span>
     </a>
   </div>
@@ -153,7 +96,7 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item compact">
@@ -176,67 +119,103 @@ window.Quarto = {
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page-left">
-      <h1 class="title">Blog Posts</h1>
-                      </div>
+    <div class="quarto-title column-body">
+      <h1 class="title">MATS 10.0 Submission Reflection</h1>
+                  <div>
+        <div class="description">
+          A reflection on the results of submitting to Neel Nanda’s MATS stream
+        </div>
+      </div>
+                </div>
   </div>
     
   
-  <div class="quarto-title-meta column-page-left">
+  <div class="quarto-title-meta">
 
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Will Snyder </p>
+            </div>
+    </div>
       
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">March 27, 2026</p>
+      </div>
+    </div>
     
       
     </div>
     
   
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(1)</span></div></div></div>
+    
 <!-- main -->
-<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
 
 
 
+<section id="overview" class="level1">
+<h1>Overview</h1>
+<p><a href="https://github.com/snyrw/fictionalframing">Repo (code, write-up included) 💻</a></p>
+<p>Around 3 months ago, I applied to Neel Nanda’s MATS stream as my first foray into mechanistic interpretability research. While I was ultimately rejected, I ended up learning much more than I think I had expected. This is somewhere between a post-mortem and an account of how it looked to produce research for the first time on my own under specific time constraints.</p>
+<section id="background" class="level2">
+<h2 class="anchored" data-anchor-id="background">Background</h2>
+<p>I got into ML as a whole in July 2025, as I was generally a bit bored with life at the time. I did the fastai MOOC, moved to reading papers and math textbooks, and then landed on mechanistic interpretability after finding <a href="https://www.alignmentforum.org/posts/jP9KDyMkchuv6tHwm/how-to-become-a-mechanistic-interpretability-researcher">this</a> post from Neel only a few days after it had come out. I focused on building some skills through ARENA and doing short projects before MATS opened in November.</p>
+</section>
+<section id="what-is-mats-and-how-does-neels-mats-stream-work" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-mats-and-how-does-neels-mats-stream-work">What is MATS and how does Neel’s MATS stream work?</h2>
+<p>MATS (ML Alignment Theory Scholars) is a fellowship program in which mentors across many different areas of AI safety work with a group of mentees on a specific research agenda, culminating in a poster at a presentation event. Many also publish their research at venues like NeurIPS, ICLR, and ICML, which is a big deal for building credibility in the space. MATS as well as other similar programs are seen as a good way to get your foot in the door when it comes to getting established in the AI safety space.</p>
+<p>Neel Nanda’s stream is specifically unique in that there seems to be much less oversight when it comes to the application process. I’ll try to not put words in his mouth (and you can view his criteria for applications <a href="https://docs.google.com/document/d/1p-ggQV3vVWIQuCccXEl1fD0thJOgXimlbBpGk6FI32I/edit?tab=t.0#heading=h.y0ohi6l5z9qn">here</a>), but when I applied, it consisted of doing a 20-hour research investigation on a problem of your choice and then writing everything up for him to see.</p>
+</section>
+<section id="research" class="level2">
+<h2 class="anchored" data-anchor-id="research">Research</h2>
+<p>In short, the project investigated how Qwen3-14B, a reasoning-capable model, processes fictionally framed jailbreaks versus direct harmful requests, using both behavioral and mechanistic methods. The idea for this was rounded down from around a dozen that I was interested in and 2-3 that I let myself investigate for up to 3 hours each.</p>
+<p>The base experiment (testing prompts) and separate behavioral work (prefilling acceptance/refusal) was what I had mostly planned out ahead of time, as I became curious about a post in 2025 from <a href="https://dsthoughts.baulab.info/">Can Rager and David Bau</a> on using prefilling attacks to extract information from DeepSeek that it otherwise avoids. I also didn’t start with the fictionally framed prompts, but rather was broadly interested in prompt-based stuff before transitioning into something narrow (which I’ll discuss a bit more later).</p>
+<p>The mechanistic work was focused on trying to pin down some sort of causal element that I couldn’t just get by doing the above experiments. I tried PCA to examine the internal structure of the model, using <a href="https://arxiv.org/abs/2406.11717">Arditi et al.&nbsp;2024</a>’s difference-in-means vector approach for ablating refusal to see what different prompt types were inducing in the model, and some neuron-level analysis based on what I had seen at specific layers when conducting PCA.</p>
+</section>
+<section id="what-id-do-differently" class="level2">
+<h2 class="anchored" data-anchor-id="what-id-do-differently">What I’d do differently</h2>
+<p>It’s been a while since I’ve touched this work I produced specifically, but there were things about how I approached research that I’d probably aim to fix if I were to resubmit to Neel’s stream again. Note that this is somewhat opinionated and may go out of date somewhat fast depending on how I change my methodology or whether AI becomes significantly better at some tasks over the short term.</p>
+<p>Neel also has a great series of posts <a href="https://www.lesswrong.com/s/5GT3yoYM9gRmMEKqL/p/hjMy4ZxS5ogA9cTYK">here</a> and <a href="https://www.lesswrong.com/posts/cbBwwm4jW6AZctymL/my-research-process-key-mindsets-truth-seeking">here</a> that broadly outline some of the mistakes that I made better than I can at the moment, so feel free to read this if you’re interested in a bit of a homework assignment.</p>
+<section id="losing-focus" class="level3">
+<h3 class="anchored" data-anchor-id="losing-focus">Losing focus</h3>
+<p>After the behavioral experiments, I wasn’t entirely sure where to go. In hindsight this was probably a signal to step back and reassess the research direction, but I ended up pushing forward into mechanistic work hoping to find something more definitive. This meant spending time on methods I wasn’t fully confident evaluating without a clean hypothesis driving each one. I wasn’t walking completely blindly into these more technical experiments, but it also wasn’t well-planned past a certain point, and that gap between “I found something at a certain layer” and “I know what to do with it” is where a lot of time got spent unproductively. Planning a clearer path from behavioral findings to mechanistic claims before running experiments would have helped, and is something I’d treat as closer to a requirement on any future project.</p>
+</section>
+<section id="overclaiming" class="level3">
+<h3 class="anchored" data-anchor-id="overclaiming">Overclaiming</h3>
+<p>Although I realized this days after submission, there were parts of my original write-up that claimed things that my results weren’t necessarily pointing to. I attribute this to a mix of subconsciously convincing myself that my results were positive while being in a bit of a rush. Finishing my first project drove a lot of this and decreased a lot of how critical I was of my own work as I was doing it. This is much more of a framing or processing issue than a technical one, and I personally see it as fixable with feedback and simply by doing more work in the field.</p>
+</section>
+<section id="ai-assisted-writing" class="level3">
+<h3 class="anchored" data-anchor-id="ai-assisted-writing">AI-assisted writing</h3>
+<p>There are moments where it’s okay to use LLMs for producing writing related to your research, though I’d recommend against it when identifying your claims. I fell into this as I didn’t leave enough time for the writing, and I think it partially led to the overclaiming I detailed above. LLMs aren’t necessarily the best at evaluating your research ideas, and might produce confident prose from uncertain premises without flagging the problem. In my experience, this can be improved if you use a large prompt or document that gives them specific context.</p>
+</section>
+</section>
+<section id="reflections-on-the-research-direction" class="level2">
+<h2 class="anchored" data-anchor-id="reflections-on-the-research-direction">Reflections on the research direction</h2>
+<p>I know that looking at all of this with clean eyes after the rejection, a part of me believes that I went far too narrow. A very niche jailbreak type tested on only one model at one size doesn’t say much about models with reasoning capabilities, and I should’ve diverted earlier on into attacking something with less built-in limitations (though most works in 20 hours would naturally carry some).</p>
+<p>On the other hand, I still find myself interested in why jailbreaks like the fictionally framed ones that I examined work. Even further, why would they work on Qwen3-14B specifically? What else could you look into mechanistically, and how could you make this more generalizable? Is there anything in the literature that discusses this already?</p>
+<p>In all, I think that you could refactor this quite a bit and come out with something worthwhile. I hold the opinion that there are probably many more impactful low-hanging fruit worth investigating though, but perhaps this sort of tension between investment and detachment is normal.</p>
+</section>
+<section id="post-hoc-revisions" class="level2">
+<h2 class="anchored" data-anchor-id="post-hoc-revisions">Post-hoc revisions</h2>
+<p>The write-up currently in the repo is actually not what I submitted to Neel, but is <a href="https://docs.google.com/document/d/1qgcOKgLal6c5LueIPs4bcUz1RQCTxzGcRVVbdXAFSZk/edit?usp=sharing">available</a> for anyone interested. After the rejection, I rewrote nearly all of the prose by hand and revised several of the claims to better reflect what the results could actually support. I restructured large parts of the paper to be more succinct and tie into broader literature as well. The submitted version was more confident than the evidence warranted, which is discussed more in the overclaiming section above. I’d point anyone reading this to the repo version as the more accurate account of the work, though it’s worth knowing the two differ.</p>
+</section>
+<section id="closing" class="level2">
+<h2 class="anchored" data-anchor-id="closing">Closing</h2>
+<p>I’d still recommend that anybody trying to get into the field applies to these mentorship programs. The application process for Neel’s stream in particular is designed so that the work you produce has value regardless of outcome, as you’re essentially running a small research project. The things you learn doing that don’t disappear with a rejection. Even if this specific project wasn’t strong enough, I came out of it with a clearer sense of what good research practice actually requires, which was worth it for me if I were to be realistic about the work I can produce at this stage.</p>
 
 
+</section>
+</section>
 
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-listing-date-sort="1774594800000" data-listing-file-modified-sort="1774746124540" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1344">
-<div class="thumbnail"><a href="./posts/post1.html" class="no-external">
-
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/post1.html" class="no-external">MATS 10.0 Submission Reflection</a>
-</h3>
-<div class="delink listing-description"><a href="./posts/post1.html" class="no-external">
-<p>A reflection on the results of submitting to Neel Nanda’s MATS stream</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/post1.html" class="no-external">
-<div class="listing-date">
-Mar 27, 2026
-</div>
-<div class="listing-author">
-Will Snyder
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
