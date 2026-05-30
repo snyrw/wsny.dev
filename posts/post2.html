@@ -173,15 +173,14 @@ ul.task-list li input[type="checkbox"] {
 <h1>Overview</h1>
 <p>I recently started development on a tool called logitlensviz, which is a no-code logit lens environment. Although I’ll detail more in a full release post in a few weeks once the tool is more polished, I want to share a few broad things about logitlensviz and what it does for documentation purposes.</p>
 <p>*Note that the UI and logic on both the frontend and backend are still largely a WIP, so some of the information presented in this blogpost may be inaccurate.</p>
-</section>
-<section id="motivation" class="level1">
-<h1>Motivation</h1>
+<section id="motivation" class="level2">
+<h2 class="anchored" data-anchor-id="motivation">Motivation</h2>
 <p>While doing a small extension for <a href="https://arxiv.org/pdf/2505.14352">Cywinski et. al’s taboo model organism paper</a> (which I have a shelved blogpost for), I ran into an issue. My extension idea was seeing whether or not a reasoning model (R1 Distill Llama) would play the game in a similar manner to what they tested in Gemma 2. I mostly got similar behavioral results despite using a somewhat different set-up, but using a logit lens ended up producing an empty heat map for Llama. Even as I’m writing this I’m not sure whether this was a model issue or something to do with the code, which is why the blogpost was shelved.</p>
 <p>As a result of this, I became interested in what sort of options their were to look at logit lens heat maps online. Writing code in Google Colab is of course very nice for freedom and prototyping, and what I’d even prefer for a very specific experiment. As a basic tool for quick checks though, I believe that what I’d like to spend my time on changes to getting something reliable in the shortest amount of time. Doing some searching didn’t reveal anything like what I had been thinking of at the time*, so I thought about things further and eventually decided to start work on this project.</p>
 <p>*Well into development, I found <a href="https://workbench.ndif.us/">NDIF Workbench</a>, which has been in development much longer than my tool. <a href="https://ndif.us/">NDIF</a> is pretty important in my eyes and has a suite of projects across interpretability, so check out what they’ve done as well.</p>
 </section>
-<section id="core-details" class="level1">
-<h1>Core Details</h1>
+<section id="core-details" class="level2">
+<h2 class="anchored" data-anchor-id="core-details">Core Details</h2>
 <div class="quarto-video"><video id="video_shortcode_videojs_video1" class="video-js vjs-default-skin vjs-fluid" controls="" preload="auto" data-setup="{}" title=""><source src="llvizpreview.mov"></video></div>
 <p>As shown in the video above, this web tool operates within a sandbox. A user can add probability heat maps via the “+ Add Lens” button, which then shows a menu (currently on the right side of the screen) that allows them to fill out information on how they’d like their heat map to turn out. Heat maps are then rendered in a fixed-size placeholder to the screen before they take their full shape after inference. These heat maps can then be dragged around as well as zoomed in and out on.</p>
 <p>Explaining the sandbox approach, I initially set out for this to be a tool where people could easily compare heat maps against each other quickly. That led to a grid pattern where there were 4 fixed squares on the screen. That was quite clumsy given that heat maps are almost always variable in size (and thus they would either expand the squares or barely fill them), a sandbox was chosen to work around that constraint.</p>
@@ -189,14 +188,15 @@ ul.task-list li input[type="checkbox"] {
 <p>A feature that wasn’t shown was the ability to add a fine-tuned model via a Hugging Face link. This has been shown to successfully work during brief testing between Qwen 2.5 Instruct (existing model on the backend) and Qwen 2.5 Coder. This involves a a validation check where we look for compatibility with the model families that are currently supported, a full fine-tune versus PEFT, safetensors, etc. As I intend for logitlensviz to be something that people beyond myself might use, more research will be done into whether or not this can be added safely into a production tool.</p>
 <p>Heat maps also load in quite fast in this video. The reason for that is because all results are cached via Neon, which should be very nice if you want to look at prompts people likely have already used. Unfortunately though, I can say that this will not be the case most of the time as inference runs through cold starts on Modal. Cold starts themselves are a life-saver from a financial standpoint on what I presume will be a tool that has somewhat bursty traffic, but “run lens” to heat map generation may take anywhere from 20-180 seconds based on some preliminary testing. <a href="https://modal.com/docs/guide/volumes">Modal Volumes</a> (especially their v2) may end up shrinking this, but I’ve more-or-less accepted that this is generally how the tool will function unless cold-starting gets dramatically quicker in… a few weeks.</p>
 </section>
-<section id="future-features" class="level1">
-<h1>Future Features</h1>
+<section id="future-features" class="level2">
+<h2 class="anchored" data-anchor-id="future-features">Future Features</h2>
 <p>Essentially all corners of logitlensviz will need some level of interrogation from now until release, but here are some thoughts on what I’d like to get to sooner rather than later.</p>
 <p>My immediate focus over the next few days will be implementing users. With that, a new button will appear next to “+ Add Lens” that allows anyone to add, duplicate, share, or delete the current project they’re on. A dense search feature will be added under this button as well.</p>
 <p>The backend will also need a major overhaul, as <a href="https://transformerlensorg.github.io/TransformerLens/content/news/release-3.0.html">TransformerLens 3.0 released just around two weeks ago</a> as of writing this. I had previously been using TransformerLens 2.0 with the typical HookedTransformer way of loading models, but TransformerBridge has completely overhauled that. I intend to port most of the backend code to this new set-up. Beyond that, I want to add tuned lens capability at the very least and have done some brief searching into patchscopes (though I’m admittedly not very familiar with what they are at the moment). Different ways of using the logit lens like top-k, next-token, and beyond will be looked into as well.</p>
 <p>I’ve also been looking into a small tutorial for new users who aren’t familiar with the logit lens. I’m trying to figure out how to implement this gracefully without being intrusive, but currently I’d imagine it’d be something you can access straight from the hero page.</p>
 <p>The frontend in its entirety will need some polish as well, and I’d consider the sandbox shown in the video earlier to be about 85% of the way there. The rest is moving around things, making them look pretty but functional, etc.</p>
 <p>There’s also the fact that I’ve never released a tool like this into the public before. I intend for logitlensviz to be open-source, and with that I expect to go through a massive refactoring/security check to ensure this isn’t completely broken.</p>
+</section>
 </section>
 <section id="conclusion" class="level1">
 <h1>Conclusion</h1>
